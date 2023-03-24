@@ -16,7 +16,8 @@ const load = key => {
   }
 };
 
-export default {
+const localStorageCustom = {
   save,
   load,
 };
+export default localStorageCustom;

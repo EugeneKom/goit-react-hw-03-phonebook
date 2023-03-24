@@ -5,7 +5,7 @@ import { ContactsForm } from './ContactsForm/ContactsForm';
 import { ContactsList } from './ContactsList/ContactsList';
 import { ContactsWrapper } from './ContactsList/ContactsList.styled';
 import { FilterNames } from './FilterNames/FilterNames';
-import localStorage from './utils/storage';
+import localStorageCustom from './utils/storage.js';
 
 const LS_KEY = 'contacts';
 
@@ -21,14 +21,14 @@ export class App extends Component {
   };
 
   componentDidMount() {
-    if (localStorage.load(LS_KEY)) {
-      this.setState({ contacts: localStorage.load(LS_KEY) });
+    if (localStorageCustom.load(LS_KEY)) {
+      this.setState({ contacts: localStorageCustom.load(LS_KEY) });
     }
   }
 
   componentDidUpdate(prevProps, prevState) {
     if (this.state.contacts !== prevState.contacts) {
-      localStorage.save(LS_KEY, this.state.contacts);
+      localStorageCustom.save(LS_KEY, this.state.contacts);
     }
   }
 
