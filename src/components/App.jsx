@@ -5,7 +5,7 @@ import { ContactsForm } from './ContactsForm/ContactsForm';
 import { ContactsList } from './ContactsList/ContactsList';
 import { ContactsWrapper } from './ContactsList/ContactsList.styled';
 import { FilterNames } from './FilterNames/FilterNames';
-import localStorage from './utils/storage/storage';
+import localStorage from './utils/storage';
 
 const LS_KEY = 'contacts';
 
